@@ -402,4 +402,4 @@ df
 
 ## Reflection
 
-(Write a paragraph expressing your thoughts, feelings, and insights about your experience with this assignment.  Pause and breath before writing - I'm trying to encourage critical thinking and self-awareness while allowing you to explore the connections between theory and practice. And yes, delete this paragraph.)
+Although confusing, writing the sql queries felt very puzzle-like. It was enjoyable, yet dreadful. Keeping track of the attribute names were a little troublesome. Next time, I would be sure to make them more straight forward.
