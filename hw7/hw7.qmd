@@ -92,20 +92,52 @@ except Exception as e:
 
 ## Crows-foot diagram
 
-Customer with primary key, ID, and first and last name has a deliveray address with ID and places orders
+People have skills and roles. The table peopleskills and peopleroles serves to reduce redundancy
 
 ```{mermaid}
 %%| echo: false
 erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-    CUSTOMER{
-        int id
-        string first_name
-        string last_name
+    people ||--o{ skills : have
+    people ||--o{ roles : have
+
+    people{
+        PRI people_id
+        varchar people_first_name
+        varchar people_last_name
+        varchar email
+        varchar linkedin_url
+        varchar headshot_url
+        varchar discord_handle
+        varchar brief_bio
+        date date_joined
     }
-    DELIVERY-ADDRESS {
-        int id
+
+    skills{
+        PRI id
+        varchar name
+        varchar description
+        varchar tag
+        varchar url
+        date time_commitment 
+    }
+    roles{
+        PRI id
+        varchar name
+        int sort_priority
+    }
+
+    peopleskills{
+        PRI id
+        int skills_id 
+        int people_id
+        date date_acquired
+    }
+
+    peopleroles{
+        PRI id
+        int people_id
+        int role_id
+        date date_assigned
     }
 ```
 

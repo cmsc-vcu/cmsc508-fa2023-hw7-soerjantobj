@@ -109,8 +109,6 @@ INSERT INTO peopleskills (skills_id, people_id) values (1, 3), (5, 3);
 
 # Person 4 has no skills;
 
-INSERT INTO peopleskills (skills_id, people_id) values (0, 4);
-
 # Person 5 has skills 3,6;
 
 INSERT INTO peopleskills (skills_id, people_id) values (3, 5), (6, 5);
